@@ -5,17 +5,29 @@
   <title>selector</title>
   <style>
     div {
-      width: 100px;
       height: 100px;
+      line-height: 100px;
       background-color: aqua;
+      text-align: center;
     }
 
     .bgRed {
       background-color: red;
+      text-decoration: overline;
+      font-family: "G마켓 산스 TTF Medium", "Noto Sans KR Thin", sans-serif;
+      font-size: 20px;
     }
 
     .bgBlue {
       background-color: blue;
+      text-decoration: underline;
+      font-family: "Noto Sans KR Thin", sans-serif;
+    }
+
+    .bgGreen {
+      background-color: green;
+      text-decoration: line-through;
+      font-family: "가짜폰트", "Noto Sans KR Thin", sans-serif;
     }
 
     .yellowText {
@@ -25,6 +37,7 @@
     #player {
       background-image: url("../day1/exit.png");
       background-size: contain;
+      border: 1px solid black;
     }
   </style>
 </head>
@@ -32,6 +45,7 @@
 <div>default</div>
 <div class="bgRed">bgRed 클래스</div>
 <div class="bgBlue yellowText">bgBlue, yellowText 클래스</div>
+<div class="bgGreen yellowText">bgGreen, yellowText 클래스</div>
 <div id="player"></div>
 <span>클래스와 id를 지정해둔 후 원하는 스타일을 적용</span>
 </body>
