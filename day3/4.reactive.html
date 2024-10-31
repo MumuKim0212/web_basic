@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>미디어 쿼리</title>
+  <style>
+    html {
+      font-size: 30px;
+    }
+
+    #div1 {
+      background-color: aqua;
+    }
+
+    @media (max-width: 1280px) {
+      #div1 {
+        background-color: red;
+        font-size: 0.8em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #div1 {
+        background-color: blue;
+        font-size: 0.6em;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="div1">media 조건문. 창 크기에 따라 달라짐</div>
+</body>
+</html>
