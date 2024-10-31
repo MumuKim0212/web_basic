@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>image_edit</title>
+  <style>
+    img {
+      width: 200px;
+    }
+
+    .filter {
+      filter: blur(5px);
+    }
+
+    .brightness {
+      filter: brightness(0.6);
+    }
+
+    .contrast {
+      filter: contrast(200%);
+    }
+
+    .drop-shadow {
+      filter: drop-shadow(4px 4px 2px black);
+    }
+
+    .grayscale {
+      filter: grayscale(100%);
+    }
+
+    .hue-rotate {
+      filter: hue-rotate(180deg);
+    }
+
+    .invert {
+      filter: invert(100%);
+    }
+
+    .opacity {
+      filter: opacity(40%);
+    }
+
+    .saturate {
+      filter: saturate(30%);
+    }
+
+    .sepia {
+      filter: sepia(100%);
+    }
+
+    .multiply {
+      filter: brightness(1.6) drop-shadow(4px 4px 2px black) hue-rotate(40deg);
+
+    }
+  </style>
+</head>
+<body>
+<h2>filter 테스트</h2>
+<img src="../day1/exit.png" class="filter">
+<img src="../day1/exit.png" class="brightness">
+<img src="../day1/exit.png" class="contrast">
+<img src="../day1/exit.png" class="drop-shadow">
+<img src="../day1/exit.png" class="grayscale">
+<img src="../day1/exit.png" class="hue-rotate">
+<img src="../day1/exit.png" class="invert">
+<img src="../day1/exit.png" class="opacity">
+<img src="../day1/exit.png" class="saturate">
+<img src="../day1/exit.png" class="sepia">
+<img src="../day1/exit.png" class="multiply">
+
+<h2>div 태그</h2>
+<header>div 대용</header>
+<footer>div 용도로 쓸 수 있는 태그</footer>
+<nav>이름만 다를 뿐 div와 동일하다.</nav>
+
+<h2>span 태그</h2>
+<zzz>내맘대로 태그를 지정해도 span으로 인식함.</zzz>
+<br>
+<yyy>커스텀 태그를 지정할 수 있기 때문에 웬만해선 에러가 안남</yyy>
+</body>
+</html>
