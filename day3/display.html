@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>display</title>
+  <style>
+    div {
+      display: inline;
+    }
+
+    #div1 {
+      display: block;
+      height: 100px;
+      background-color: red;
+    }
+
+    #div2 {
+      display: none;
+      height: 100px;
+      background-color: blue;
+    }
+
+    #div3 {
+      display: inline;
+      height: 100px;
+      background-color: blue;
+    }
+
+    .highlight {
+      width: 100px;
+      color: red;
+    }
+
+    .inline-block {
+      width: 150px;
+      display: inline-block;
+      background-color: aqua;
+    }
+
+    .div4 {
+      margin: 15px;
+      padding: 15px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+<h2>display</h2>
+<div id="div1">block은 가로로 한줄 꽉참. div의 기본값. width가 100%거나 수직으로 요소를 쌓을 때 사용</div>
+<div id="div2">none은 표시하지 않음</div>
+<div id="div3">inline은 텍스트에 맞춰짐. 특정 단어나 구문에만 스타일을 줄 때 사용</div>
+
+<br>
+<h2>span</h2>
+<span>span은 기본값으로</span>
+<span class="highlight">inline</span>
+<span>이다.</span>
+
+<br>
+
+<h2>inline-block</h2>
+<span class="inline-block">가로로 배치하면서 width/height가 필요한 요소(버튼, 메뉴 등). block의 특성도 가짐</span>
+
+<br>
+
+<h2>margin</h2>
+<div class="div4">margin, padding</div>
+</body>
+</html>
