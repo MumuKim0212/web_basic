@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM 조작</title>
+  <script>
+      document.write("<h1>html을 js로 변환</h1>");
+      document.write("<b>script에서 document로 작성가능</b>");
+      document.write("<p>밖에 작성하면 순서상 화면을 그리기 전에 생성되므로 사용될일은 없음</p>");
+      document.write("<div>함수로 작성해 body에서 실행하면 되긴함</div>");
+
+      function load() {
+          document.addEventListener("keydown", (event) => {
+              if (event.key === "ArrowLeft") {
+                  console.log("왼쪽");
+              } else if (event.key === "ArrowRight") {
+                  console.log("오른쪽");
+              } else if (event.key === "ArrowUp") {
+                  console.log("위쪽");
+              } else if (event.key === "ArrowDown") {
+                  console.log("아래쪽");
+              }
+          })
+      }
+
+      function changeTextColor() {
+          let div = document.getElementById("id_div");
+          div.style.color = "red";
+      }
+
+      function changeClassStyle1() {
+          let div = document.getElementById("id_div");
+          div.className = "style1";
+      }
+
+      function changeClassStyle2() {
+          let div = document.getElementById("id_div");
+          div.className = "style2";
+      }
+
+      function inputTag() {
+          const div = document.getElementById("background");
+          div.innerHTML = "<b>hello</b>";
+      }
+
+
+  </script>
+
+  <style>
+    .style1 {
+      background-color: yellow;
+    }
+
+    .style2 {
+      background-color: aqua;
+    }
+
+    div {
+    }
+
+    #id_div {
+    }
+
+    .classDiv {
+    }
+
+    #background {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+
+    #mouse {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+<body onload="load()">
+<br>
+<h2>function으로 ID를 검색</h2>
+<button onclick="changeTextColor()">색상 변경</button>
+<button onclick="changeClassStyle1()">style1</button>
+<button onclick="changeClassStyle2()">style2</button>
+<div>div</div>
+<div id="id_div">id_div</div>
+<div class="classDiv">classDiv</div>
+<div class="classDiv">classDiv</div>
+
+<br>
+
+<button onclick="inputTag()">tag</button>
+<div id="background"></div>
+
+<br>
+
+<h2>Select</h2>
+<label for="type">
+  <select id="type" onchange="typeChanged()">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+</label>
+
+<script>
+    function typeChanged() {
+        const type = document.getElementById("type");
+        console.log(type.value);
+    }
+</script>
+
+<br>
+
+<div id="mouse" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"></div>
+
+<script>
+    function mouseOver(target) {
+        target.style.backgroundColor = "red";
+    }
+
+    function mouseOut(target) {
+        target.style.backgroundColor = "";
+    }
+</script>
+</body>
+</html>
