@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS</title>
+  <script>
+      let i = 10;
+      console.log(typeof i);
+      i = "hello";
+      console.log(typeof i);
+      console.log("var를 쓰면 중괄호 안에서 쓴 변수가 밖에서도 사용 가능해짐. (레거시)");
+      console.log("js는 변수 타입이 없음.\n dl 이 방식은 편하지만 문제가 많이 발생함");
+      console.log("그래서 나온게 typescript");
+
+      let str1 = "일반적인" + "합치기";
+      let str2 = '일반적인데 없어보임';
+      let str3 = `최신 ${i} ${3 + 3} 백틱으로 작성`;
+
+      function hello(x, y, name) {
+          console.log("함수만 보고는 return타입을 미리 알 수 없음");
+          console.log("매개변수의 타입도 알 수 없음");
+          return true;
+      }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
