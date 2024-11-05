@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>exam4</title>
+  <script>
+      function mouseOver(tag) {
+          tag.style.border = "1px solid black";
+          tag.style.backgroundColor = "white";  // background 대신 backgroundColor 사용
+          tag.style.color = "black";
+      }
+
+      function mouseLeave(tag) {
+          tag.style.border = "none";
+          tag.style.backgroundColor = "gray";   // background 대신 backgroundColor 사용
+          tag.style.color = "white";
+      }
+
+      function mouseDown(tag) {
+          tag.style.border = "none";
+          tag.style.backgroundColor = "darkgray";   // background 대신 backgroundColor 사용
+          tag.style.color = "white";
+      }
+  </script>
+
+  <style>
+    .btn {
+      border: none;
+      background-color: gray;
+      color: white;
+      font-size: 20px;
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+<button class="btn"
+        onmouseover="mouseOver(this)"
+        onmouseleave="mouseLeave(this)"
+        onmousedown="mouseDown(this)"
+        onmouseup="mouseLeave(this)">html
+</button>
+<button class="btn"
+        onmouseover="mouseOver(this)"
+        onmouseleave="mouseLeave(this)"
+        onmousedown="mouseDown(this)"
+        onmouseup="mouseLeave(this)">css
+</button>
+
+<button class="btn"
+        onmouseover="mouseOver(this)"
+        onmouseleave="mouseLeave(this)"
+        onmousedown="mouseDown(this)"
+        onmouseup="mouseLeave(this)">javascript
+</button>
+</body>
+</html>

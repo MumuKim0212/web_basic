@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>exam3</title>
+  <script>
+      function exam3() {
+          let txt = '';
+          let hideID = document.getElementById("hideID");
+          while (txt === '' || txt === null) {
+              txt = prompt('텍스트 값을 입력해 주세요');
+          }
+
+          hideID.style.display = "block";
+          outputText(txt);
+      }
+
+      function outputText(txt) {
+          let cls = document.getElementsByClassName("txt");
+          for (let i = 0; i < cls.length; i++) {
+              cls[i].innerHTML = txt;
+          }
+      }
+
+      function changeColor(color) {
+          let cls = document.getElementsByClassName("txt");
+          alert(`${color}색으로 변경됩니다.`);
+          for (let i = 0; i < cls.length; i++) {
+              cls[i].style.color = color;
+          }
+      }
+  </script>
+
+  <style>
+    #hideID {
+      height: 400px;
+      display: none;
+      text-align: center;
+    }
+
+    .txt {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body onload="exam3()">
+<div id="hideID">
+  <br><br><br>
+  <div class="txt"></div>
+  <br>
+  <button onclick="changeColor('red')">빨강</button>
+  <button onclick="changeColor('blue')">파랑</button>
+  <button onclick="changeColor('green')">초록</button>
+</div>
+
+</body>
+</html>
