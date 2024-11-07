@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"
+          integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+          crossorigin="anonymous"></script>
+  <style>
+    #player {
+      position: relative;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+    }
+  </style>
+  <script>
+      function hide() {
+          $("#player").hide(1000);
+      }
+
+      function show() {
+          $("#player").show(1000);
+      }
+
+      function fadeout() {
+          $("#player").fadeOut(1000);
+      }
+
+      function fadein() {
+          $("#player").fadeIn(1000);
+      }
+
+      function slideup() {
+          $("#player").slideUp(1000);
+      }
+
+      function movelr(vec) {
+          $("#player").animate({
+              left: vec
+          });
+      }
+
+      function moveud(vec) {
+          $("#player").animate({
+              top: vec
+          });
+      }
+
+      function load() {
+          document.addEventListener("keydown", (event) => {
+              if (event.key === "ArrowLeft") {
+                  movelr("-=100px")
+              } else if (event.key === "ArrowRight") {
+                  movelr("+=100px");
+              } else if (event.key === "ArrowUp") {
+                  moveud("-=100px");
+              } else if (event.key === "ArrowDown") {
+                  moveud("+=100px");
+              }
+          })
+      }
+  </script>
+
+</head>
+<body onload="load()">
+<h2>jQuery</h2>
+<div id="player">방향키를 이용해 조종</div>
+<button onclick="hide()">hide</button>
+<button onclick="show()">show</button>
+<button onclick="fadeout()">fadeOut</button>
+<button onclick="fadein()">fadeIn</button>
+<button onclick="slideup()">slideUp</button>
+<button onclick="move()">animate</button>
+</body>
+</html>
